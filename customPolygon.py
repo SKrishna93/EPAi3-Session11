@@ -116,7 +116,7 @@ class custom_polygon_iterable:
         polygon = regular_polygon(vertex, circum_rad)
         polygon.set_polygon_property
         return polygon.area/polygon.perimeter
-    
+
     #Converting Custom polygon sequence into to an iterable
     def __iter__(self):
         '''
@@ -127,7 +127,7 @@ class custom_polygon_iterable:
             iterator object of the custom_polygon_iterator class
         '''
         return self.custom_polygon_iterator(self)
-    
+
     class custom_polygon_iterator:
         '''
         This internal class creates a iterator object for the custom_polygon_iterable class
@@ -142,7 +142,7 @@ class custom_polygon_iterable:
             '''
             self._iterable_obj = iterable_obj
             self._index = 0
-        
+
         def __iter__(self):
             '''
             This is a iter method for the custom_polygon_iterator class
@@ -152,7 +152,7 @@ class custom_polygon_iterable:
                 self object
             '''
             return self
-        
+
         def __next__(self):
             '''
             This is the next method of the iterator object. It returns the next element in the sequence
