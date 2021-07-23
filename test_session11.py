@@ -5,17 +5,20 @@ import inspect
 import re
 import polygon, customPolygon
 from polygon import regular_polygon
-from customPolygon import custom_polygon_sequence
+from customPolygon import custom_polygon_iterable
 
 README_CONTENT_CHECK_FOR = [
     'regular_polygon',
-    'custom_polygon_sequence',
+    'custom_polygon_iterable',
     '__init__',
     '__repr__',
     '__eq__',
     '__gt__',
     '__len__',
     '__getitem__',
+    '__iter__',
+    '__next__',
+    'Class custom_polygon_iterator',
     'set_polygon_property',
     'num_of_sides',
     'circum_radius',
@@ -31,14 +34,14 @@ README_CONTENT_CHECK_FOR = [
     'area_peri_ratios'
 ]
 
-def test_session10_readme_exists():
+def test_session11_readme_exists():
     """
     Method checks if there is a README.md file. 
     failure_message: "README.md file missing!"  
     """
     assert os.path.isfile("README.md"), "README.md file missing!"
 
-def test_session10_readme_500_words():
+def test_session11_readme_500_words():
     """
     Method checks if there are atleast 500 words in the README.md file
     failures_message: Make your README.md file interesting! Add atleast 500 words
@@ -48,7 +51,7 @@ def test_session10_readme_500_words():
     readme.close()
     assert len(readme_words) >= 500, "Make your README.md file interesting! Add atleast 500 words"
 
-def test_session10_readme_proper_description():
+def test_session11_readme_proper_description():
     """
     Method checks if all the functions are described in the README.md file
     failures_message: You have not described all the functions/classes well in your README.md file
@@ -63,7 +66,7 @@ def test_session10_readme_proper_description():
             pass
     assert READMELOOKSGOOD == True, "You have not described all the functions/class well in your README.md file"
 
-def test_session10_readme_file_for_more_than_10_hashes():
+def test_session11_readme_file_for_more_than_10_hashes():
     """
     Method checks if README.md file has atleast 10 '#' (indentations)
     failures_message: You have not described all the functions/classes well in your README.md file 
@@ -101,7 +104,7 @@ def test_customPolygon_indentations():
 
 def test_polygon_function_name_had_cap_letter():
     """
-    Method checks for any Upper case in the function names in session10.py
+    Method checks for any Upper case in the function names in session11.py
     failures_message: You have used Capital letter(s) in your function names
     """
     functions = inspect.getmembers(polygon, inspect.isfunction)
@@ -110,7 +113,7 @@ def test_polygon_function_name_had_cap_letter():
 
 def test_customPolygon_function_name_had_cap_letter():
     """
-    Method checks for any Upper case in the function names in session10.py
+    Method checks for any Upper case in the function names in session11.py
     failures_message: You have used Capital letter(s) in your function names
     """
     functions = inspect.getmembers(customPolygon, inspect.isfunction)

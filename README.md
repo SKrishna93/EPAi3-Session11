@@ -33,15 +33,15 @@
         - This internal class creates a iterator object for the custom_polygon_iterable class
         ##### Methods
         --------------
-        * __init__(self, iterable_obj)
+        * __init__ (self, iterable_obj)
             - This is a constructor method to the custom_polygon_iterator class
             - input - iterable_obj - Object of the iterable class
             - return - None
-        * __iter__()
+        * __iter__ ()
             - This is a iter method for the custom_polygon_iterator class
             - input - self object
             - return - self object
-        * __next__()
+        * __next__ ()
             - This is the next method of the iterator object. It returns the next element in the sequence
             - input - self
             - return - next item in the index
