@@ -6,6 +6,8 @@
 
 #### Objective: Refactor the Polygons (sequence) type, into an iterable. You'll need to implement both an iterable, and an iterator.
 
+https://deepnote.com/project/EPAi3-Session11-70BgRvmgT0qnHPmCHXSHdQ/%2Fsession11_notebook.ipynb
+
 #### custom_polygon_iterable :
 + This class creates a iterable of polygon objects. It has the following attributes and methods
 
